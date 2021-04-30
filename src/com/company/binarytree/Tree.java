@@ -29,6 +29,16 @@ public class Tree {
         }
     }
 
+    /**
+     * The algorithm for sorting a binary tree, starting from left to top, then right
+     *       T
+     *      /\
+     *     /  \
+     *    /    \
+     *   /      \
+     *  L        R
+     *
+     */
     private void showInOrder(Node root) {
         if (root != null) {
             showInOrder(root.getLeft());
@@ -37,6 +47,15 @@ public class Tree {
         }
     }
 
+    /**
+     * The algorithm for sorting a binary tree, starting from top for left, then right
+     *     T
+     *    /
+     *   /
+     *  /
+     * L ----------- R
+     *
+     */
     private void showInPreOrder(Node root) {
         if (root != null) {
             System.out.println("    > " + root.getData());
@@ -45,6 +64,16 @@ public class Tree {
         }
     }
 
+    /**
+     * The algorithm for sorting a binary tree, starting from left to right, then up
+     *         T
+     *          \
+     *           \
+     *            \
+     *             \
+     *  L --------- R
+     *
+     */
     private void showInPostOrder(Node root) {
         if (root != null) {
             showInPreOrder(root.getLeft());
